@@ -1,0 +1,8 @@
+        //4.35之前
+        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configure.getProperties()).build();
+        SessionFactory sessionFactory = configure.buildSessionFactory(serviceRegistry);
+        
+        //hibernate4.35之后实例化服务登记
+        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
+        //获取Session工厂
+        SessionFactory sessionFactory = configure.buildSessionFactory();
