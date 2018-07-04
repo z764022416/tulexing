@@ -1,0 +1,20 @@
+load data
+infile 'E:\sql_1\seq.txt'
+into table tb_abc
+fields terminated by ','
+OPTIONALLY ENCLOSED BY '"'
+TRAILING NULLCOLS
+(
+aid,
+aname
+)
+
+
+
+
+
+
+
+
+
+sqlldr SYSTEM/oracle@orcl control=C:\Users\Administrator\Desktop\ÏîÄ¿\oracle.ctl errors=1000 rows=1000 data=e:\sql_1\seq.txt
